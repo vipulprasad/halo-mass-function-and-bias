@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 Mpc = 3.0857e22                     # 1 Mpc in metres.
 sm = 2e30                           # Solar mass in Kg.
 G = 6.67408e-11*sm/(Mpc**3)         # Gravitational constant.
-h = 1 #0.6895004                    # Hubble constant in units of 100 Km/hr/Mpc.
-H_o = (100*h)/(Mpc*(10**(-3)))      # Hubble constant.
+h0 = 1 #0.6895004                    # Hubble constant in units of 100 Km/hr/Mpc.
+H_o = (100*h0)/(Mpc*(10**(-3)))      # Hubble constant.
 omega_b = 0.05                      # Baryons density parameter.
 omega_m = 0.301685                  # Matter(baryons+dark matter) density parameter.
 omega_lambda = 0.698315             # Dark energy density parameter.
@@ -25,7 +25,7 @@ different order of magnitudes.
 
 def Simpson(f, a, b, m): #if a = 0 this won't work
 	x = a				 #also for small intervals Simpson has more relative 
-	h  = a*1.01			 #error, and more error than Trapezoidal below
+	h  = a*01			 #error, and more error than Trapezoidal below
 	s = 0
 	
 	while x<b:
@@ -50,7 +50,7 @@ def Trapezoidal(f, a, b, m):
 
 def Transfer(k): # Transfer function
 
-	gamma = h*h*omega_m*exp(-omega_b-(sqrt(2*h)*(omega_b/omega_m)))
+	gamma = h0*h0*omega_m*exp(-omega_b-(sqrt(2*h0)*(omega_b/omega_m)))
 	x = (k/gamma)
 	A = log(1+2.34*x)/(2.34*x)
 	B = (1+(3.89*x)+(16.1*x)**2+(5.46*x)**3+(6.71*x)**4)**(-0.25)
@@ -102,7 +102,7 @@ at R = 8.0/h
 '''
 
 norm8 = 1
-R8 = 8.0/h
+R8 = 8.0/h0
 sigma8 = Sigma(R8)
 norm8 = sigma_8/sigma8
 print(R8,Sigma(R8), norm8) 
