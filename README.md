@@ -1,6 +1,6 @@
 # halo-mass-function-and-bias
 
-This repository consists simple python implementations for calculating mass function and bias of dark matter halos from different models.
+This repository consists simple python implementations for calculating mass function and bias of dark matter halos from different models that I did as part of my master's thesis.
 
 Halo Mass functions
   1. Press-Schechter
